@@ -10,7 +10,9 @@
 
 本项目中的播放源地址可能会失效，如需测试需要更改可用的播放源，具体代码在com.gxf.liveplay.HttpUtils#getOfflinePlayList，数据格式如下：
 
-[  
+```
+
+[  
   {  
     "group": "省内频道",  
     "list": [  
@@ -55,5 +57,6 @@
       }  
     ]  
   }  
-]  
+]  
 
+｀｀｀
