@@ -34,7 +34,7 @@ public class PlayListCache {
         }
     }
     public static void initPlayInfo(String userName,String password) throws Exception{
-        String playList = HttpUtils.getPlayList(userName,password);
+        String playList = HttpUtils.getOfflinePlayList();
         JSONArray jsonArray = JSON.parseArray(playList);
         PlayListCache.groupInfoArray = new String[jsonArray.size() + 1];
         PlayListCache.groupInfoArray[0] = "我的频道";
