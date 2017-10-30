@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">电视直播</string>
+    <string name="title_activity_login">登录</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">帐号</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录直播平台</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_invalid_email">帐号无效</string>
+    <string name="error_invalid_password">密码长度太短</string>
+    <string name="error_incorrect_password">帐号或者密码错误</string>
+    <string name="error_field_required">输入项不能为空</string>
+    <string name="permission_rationale">权限不足</string>
+    <string name="gdtslogan">GDTslogan</string>
+    <string name="click_to_skip">点击跳过</string>
+    <string name="title_alert">提示信息</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确认</string>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/bg_dialog_confirm</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <string name="title_activity_service_settings">ServiceSettings</string>
+</resources>

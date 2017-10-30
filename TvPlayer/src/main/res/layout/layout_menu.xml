@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="match_parent"
+    android:id="@+id/leftMenuCtrl"
+    android:layout_gravity="left"
+    android:visibility="gone"
+    android:background="@drawable/dark_no_shadow"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/turnLeft"
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:adjustViewBounds="false"
+            android:background="@drawable/tv_switch_bg_left"
+            android:onClick="turnLeft" />
+
+        <TextView
+            android:id="@+id/tvGroupTitle"
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="我的频道"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"  />
+
+        <ImageButton
+            android:id="@+id/turnRight"
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:adjustViewBounds="false"
+            android:background="@drawable/tv_switch_bg_right"
+            android:onClick="turnRight" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:layout_gravity="center"
+        android:listSelector="@color/colorPrimaryDark"/>
+</LinearLayout>

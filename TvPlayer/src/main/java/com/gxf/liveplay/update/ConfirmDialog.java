@@ -1,0 +1,57 @@
+package com.gxf.liveplay.update;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.gxf.liveplay.R;
+
+
+public class ConfirmDialog extends Dialog {
+
+    CallBack callback;
+    private TextView content;
+    private Button sureBtn;
+    private Button cancleBtn;
+
+    public ConfirmDialog(Context context, CallBack callback) {
+        super(context, R.style.CustomDialog);
+        this.callback = callback;
+        setCustomDialog();
+    }
+
+    private void setCustomDialog() {
+        View mView = LayoutInflater.from(getContext()).inflate(R.layout.dialog_confirm, null);
+        sureBtn = (Button)mView.findViewById(R.id.dialog_confirm_sure);
+        cancleBtn = (Button)mView.findViewById(R.id.dialog_confirm_cancle);
+        content = (TextView) mView.findViewById(R.id.dialog_confirm_title);
+
+
+        sureBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callback.callback(1);
+                ConfirmDialog.this.cancel();
+            }
+        });
+        cancleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callback.callback(0);
+                ConfirmDialog.this.cancel();
+            }
+        });
+        super.setContentView(mView);
+    }
+
+
+    public ConfirmDialog setContent(String s){
+        content.setText(s);
+        return this;
+    }
+
+
+}
