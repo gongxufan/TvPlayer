@@ -59,4 +59,4 @@
 ]  
 ```
 # screenshot
-!img[https://github.com/gongxufan/TvPlayer/blob/master/screenshot/3.jpeg?raw=true]
+![screenshot](https://github.com/gongxufan/TvPlayer/blob/master/screenshot/3.jpeg?raw=true)
